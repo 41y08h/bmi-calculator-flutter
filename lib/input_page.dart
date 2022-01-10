@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bmi_calculator/results_page.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:bmi_calculator/icon_content.dart';
@@ -210,7 +212,13 @@ class _InputPageState extends State<InputPage> {
               width: double.infinity,
               height: kBottomContainerHeight,
               margin: EdgeInsets.only(top: 10),
-              child: Text('CALCULATE'),
+              padding: Platform.isIOS ? EdgeInsets.only(bottom: 20) : null,
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: kLargeButtonTextStyle,
+                ),
+              ),
             ),
           ),
         ],
