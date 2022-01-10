@@ -1,6 +1,5 @@
-import 'package:bmi_calculator/bottom_button.dart';
-import 'package:bmi_calculator/constants.dart';
-import 'package:bmi_calculator/reusable_card.dart';
+import 'package:bmi_calculator/components/bottom_button.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
@@ -13,16 +12,16 @@ class ResultsPage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Container(
-              child: Center(
-                child: Text(
-                  "Your Result",
-                  style: TextStyle(
-                    fontSize: 50.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                "Your Result",
+                style: TextStyle(
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -38,12 +37,12 @@ class ResultsPage extends StatelessWidget {
                     "OVERWEIGHT",
                     style: TextStyle(
                       fontSize: 20.0,
-                      color: Colors.green,
+                      color: Colors.red,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    '25.7',
+                    '26.7',
                     style: TextStyle(
                       fontSize: 100.0,
                       fontWeight: FontWeight.bold,
